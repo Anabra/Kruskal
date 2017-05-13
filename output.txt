@@ -1,8 +1,0 @@
-d 9 f
-c 8 b
-d 7 c
-a 4 b
-h 1 g
-i 2 h
-e 2 c
-c 4 i

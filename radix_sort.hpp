@@ -1,6 +1,8 @@
 template <class T, class ToInt, class NthDigit>
 void counting_sort(std::vector<T>& vec, int base, ToInt f, NthDigit nth)
 {
+  if (vec.size() < 2) return;
+
   std::vector<int> digits;
 
   digits.reserve(base);
@@ -70,6 +72,8 @@ ForwardIt maximum(ForwardIt first, ForwardIt last, Compare cmp)
 template <class T, class ToInt>
 void radix_sort(std::vector<T>& vec, ToInt f)
 {
+  if (vec.size() < 2) return;
+
   int n = (int)ceil(log10(
     f(*maximum(vec.cbegin(),
                vec.cend(),
