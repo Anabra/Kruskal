@@ -10,8 +10,8 @@ feszítőfáját!
 Elemzés
 =======
 
-Az algoritmus
--------------
+## Az algoritmus
+
 
 A Kruskal algoritmust fogjuk használni a feladat megoldásához. Ehhez szükségünk
 lesz egy lineáris rendező algoritmusra, valamint a union-find adatszerkezetre.
@@ -22,8 +22,8 @@ Ezeket az algoritmusokat általánosan fogjuk implementálni, tetszőleges `T`
 típusra alkalmazhatóak lesznek (néhány megszorítás mellett).
 
 
-Az adatszerkezet
-----------------
+## Az adatszerkezet
+
 
 Az algoritmus megvalósításához egy általános célú gráf típust fogunk használni.
 A gráfban tetszőleges típussal címkézhetők mind az élek, mind a csúcsok (néhány
@@ -47,8 +47,8 @@ Tervezés
 
 A feladatot `C++14`-ben fogjuk megvalósítani.
 
-`disjoint_set<T>`
-----------------
+## `disjoint_set<T>`
+
 
 A fentebbi típussal fogjuk megvalósítani a union-find adatszerkezetet.
 Az osztály interface-e három függvényt biztosít a számunkra:
@@ -78,8 +78,8 @@ elemek száma . [↩](#a1)
 
 
 
-`radix_sort(vector<T>& vec, ToInt f)`
-----------------------------------------
+## `radix_sort(vector<T>& vec, ToInt f)`
+
 
 A `radix_sort` teljes mértékben a `countint_sort`-ra alapszik. Ennek a
 függvénynek csupán annyi a feladata, hogy a megadott `f` függvény segítségével
@@ -88,8 +88,8 @@ a __n__-et, leghosszabb számot hosszát, és meghívja a `counting_sort`-ot
 __n__-szer, mindig eggyel odébb tolva a rendezendő helyiértéket.
 
 
-`counting_sort(vector<T>& vec, int base, ToInt f, NthDigit nth)`
-----------------------------------------------------------------
+## `counting_sort(vector<T>& vec, int base, ToInt f, NthDigit nth)`
+
 
 A szokásos algoritmust implementáljuk, annyi különbséggel, hogy itt tetszőleges
 `T` típust tudunk rendezni, amely leképezhető egy egész számra. Továbbá az
@@ -98,8 +98,8 @@ lekérdező függvénnyel.
 
 
 
-`Graph <NodeLabel, EdgeLabel>`
-------------------------------
+## `Graph <NodeLabel, EdgeLabel>`
+
 
 Célunk egy hatékony, általános célú gráf adatszerkezet megvalósítása. A gráfot
 úgynevezett környezetekkel fogjuk ábrázolni. Minden csúcshoz hozzárendelünk
