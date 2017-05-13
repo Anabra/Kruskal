@@ -121,3 +121,12 @@ felhasználó, a hozzájuk rendelt környezeteket nem.
 
 __Fontos:__ Kizárólag olyan típus lehet a `NodeLabel` és `EdgeLabel` paraméter
 amely rendelkezik `std::hash<T>` specializációval.
+
+
+
+Fordítás és futtatás
+====================
+
+A `main.cpp` fájlt fordítsuk a c++14 szabványa szerint. A fordított program
+egy paramétert várt, amely az input fájl neve. Az eredményt a konzolra írja ki,
+valamint egy `output.txt` nevű fájlba.
