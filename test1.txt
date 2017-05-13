@@ -1,0 +1,8 @@
+4
+Budapest Eger Pecs Szeged
+5
+Budapest Eger 10
+Pecs Budapest 5
+Eger Pecs 20
+Szeged Eger 19
+Szeged Pecs 4
