@@ -45,6 +45,8 @@ adatszerkezetre, elegendő lenne egy megfelelő él reprezentáció.
 Tervezés
 ========
 
+A feladatot C++14-ben fogjuk megvalósítani.
+
 `disjoint_set<T>`
 ----------------
 
