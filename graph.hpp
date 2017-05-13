@@ -2,20 +2,6 @@
 #include <iostream>
 
 template <typename NL, typename EL>
-Graph<NL, EL>::Graph() : num_of_nodes(0), num_of_edges(0)
-{
-
-}
-
-template <typename NL, typename EL>
-Graph<NL, EL>::~Graph()
-{
-
-}
-
-
-
-template <typename NL, typename EL>
 auto Graph<NL, EL>::insert_node(const NL& node_label) -> Context&
 {
   Context empty_context;
@@ -160,6 +146,7 @@ void  Graph<NL, EL>::delete_node (const NL& node)
   for (auto v : in_nodes)
   {
     edges.erase({v, 0, node});
+    num_of_edges--;
 
     auto &in_edges = contexts.find(v)->second.outgoing;
     in_edges.erase(std::remove_if(in_edges.begin(),
@@ -171,6 +158,7 @@ void  Graph<NL, EL>::delete_node (const NL& node)
   for (auto v : out_nodes)
   {
     edges.erase({node, 0, v});
+    num_of_edges--;
 
     auto &out_edges = contexts.find(v)->second.incoming;
     out_edges.erase(std::remove_if(out_edges.begin(),
@@ -204,6 +192,7 @@ void  Graph<NL, EL>::delete_edge (const UnlabeledEdge& edge)
                  in_edges.cend());
 
   edges.erase({edge.from, 0, edge.to});
+  num_of_edges--;
 }
 
 

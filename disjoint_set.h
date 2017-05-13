@@ -25,9 +25,9 @@ template <class T>
 class disjoint_set
 {
 public:
-  disjoint_set();
+  disjoint_set() = default;
   disjoint_set(std::initializer_list<T> elements);
-  ~disjoint_set();
+  ~disjoint_set() = default;
 
   int size() const { return elems.size(); }
   int subset_size(const T& elem) { return sets[indices.find(find(elem))->second].size; }

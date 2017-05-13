@@ -18,8 +18,8 @@ public:
   using const_iterator = detail::node_iterator  <NodeLabel, EdgeLabel>;
 
 
-  Graph();
-  ~Graph();
+  Graph() : num_of_nodes(0), num_of_edges(0) {};
+  ~Graph() = default;
 
   void                   add_edge       (const Edge&);
   void                   add_node       (const NodeLabel&);

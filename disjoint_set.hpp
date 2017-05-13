@@ -1,22 +1,10 @@
 #include <stdexcept>
 
 template <class T>
-disjoint_set<T>::disjoint_set()
-{
-
-}
-
-template <class T>
 disjoint_set<T>::disjoint_set(std::initializer_list<T> elements)
 {
   for(auto it = elements.begin(); it != elements.end(); it++)
     add(*it);
-}
-
-template <class T>
-disjoint_set<T>::~disjoint_set()
-{
-
 }
 
 
@@ -34,7 +22,7 @@ T disjoint_set<T>::find(const T& elem)
     root = sets[root].pred;
   }
 
-  for(int i = 0; i < shrinkables.size(); i++)
+  for(unsigned int i = 0; i < shrinkables.size(); i++)
   {
     sets[shrinkables[i]].pred = root;
   }

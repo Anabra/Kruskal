@@ -23,7 +23,7 @@ void counting_sort(std::vector<T>& vec, int base, ToInt f, NthDigit nth)
     places[i] = --sum_digits[nth(f(vec[i]))];
 
 
-  for (int i = 0; i < vec.size(); i++)
+  for (unsigned int i = 0; i < vec.size(); i++)
   {
     int from = i;
     T cur = vec[from];

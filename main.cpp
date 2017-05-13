@@ -51,6 +51,12 @@ void parse_undirected_graph(istream& in, Graph<NodeLabel, EdgeLabel>& g)
 
 int main(int argc, char *argv[])
 {
+  if (argc <= 1 || argc > 2)
+  {
+    cerr << "Invalid number of parameters" << endl;
+    return -1;
+  }
+
   ifstream in_file(argv[1]);
   ofstream out_file("output.txt");
 
