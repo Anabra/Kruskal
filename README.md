@@ -18,8 +18,8 @@ lesz egy lineáris rendező algoritmusra, valamint a union-find adatszerkezetre.
 Rendezési algoritmusnak a radix rendezést vélasztjuk, amely a counting sort-ot
 fogja használni.
 
-Ezeket az algoritmusokat általánosan fogjuk implementálni, tetszőleges T típusra
-alkalmazhatóak lesznek (néhány megszórítás mellett).
+Ezeket az algoritmusokat általánosan fogjuk implementálni, tetszőleges `T`
+típusra alkalmazhatóak lesznek (néhány megszorítás mellett).
 
 
 Az adatszerkezet
@@ -45,7 +45,7 @@ adatszerkezetre, elegendő lenne egy megfelelő él reprezentáció.
 Tervezés
 ========
 
-A feladatot C++14-ben fogjuk megvalósítani.
+A feladatot `C++14`-ben fogjuk megvalósítani.
 
 `disjoint_set<T>`
 ----------------
@@ -108,13 +108,13 @@ biztosítani a környező csűcsok gyors elérését. Ezeket a `NodeLabel` - `Co
 párokat egy `std::unordered_map`-ben fogjuk tárolni, amely így nemcsak gyors
 lesz, de kényelmessé teszi az adatszerkezet használatát. a környezetek
 segítségével effektív törlést biztosíthatunk, hiszen, ha törlünk egy csúcsot,
-akkor egyől ismerni fogjuk azokat a csúcsokat, amelyeket frissíten kell.
+akkor egyből ismerni fogjuk azokat a csúcsokat, amelyeket frissíten kell.
 
 Az éleket is tárolni fogjuk egy `std::unordered_set`-ben. Ez fogja biztosítani
 az élek gyors elérését.
 
 A gráfot egy konstans iterátorral járhatjuk be, amely mindössze annyiban
-különbözik az `std::unordered_map` konstan iterátorától, hogy ez kizárólag
+különbözik az `std::unordered_map` konstans iterátorától, hogy ez kizárólag
 a kulcshoz ad hozzáférést, tehát a csak a csúcsok címkéit fogja látni a
 felhasználó, a hozzájuk rendelt környezeteket nem.
 
@@ -127,6 +127,6 @@ amely rendelkezik `std::hash<T>` specializációval.
 Fordítás és futtatás
 ====================
 
-A `main.cpp` fájlt fordítsuk a c++14 szabványa szerint. A fordított program
+A `main.cpp` fájlt fordítsuk a `c++14` szabványa szerint. A fordított program
 egy paramétert várt, amely az input fájl neve. Az eredményt a konzolra írja ki,
 valamint egy `output.txt` nevű fájlba.
