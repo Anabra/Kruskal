@@ -46,7 +46,6 @@ void  Graph<NL, EL>::add_edge (const Edge& edge)
   c1.outgoing.push_back({edge.label, edge.to});
   c2.incoming.push_back({edge.label, edge.from});
   edges.insert(edge);
-  num_of_edges++;
 
   // std::cerr << "done" << std::endl;
 }
@@ -146,7 +145,6 @@ void  Graph<NL, EL>::delete_node (const NL& node)
   for (auto v : in_nodes)
   {
     edges.erase({v, 0, node});
-    num_of_edges--;
 
     auto &in_edges = contexts.find(v)->second.outgoing;
     in_edges.erase(std::remove_if(in_edges.begin(),
@@ -158,7 +156,6 @@ void  Graph<NL, EL>::delete_node (const NL& node)
   for (auto v : out_nodes)
   {
     edges.erase({node, 0, v});
-    num_of_edges--;
 
     auto &out_edges = contexts.find(v)->second.incoming;
     out_edges.erase(std::remove_if(out_edges.begin(),
@@ -192,7 +189,6 @@ void  Graph<NL, EL>::delete_edge (const UnlabeledEdge& edge)
                  in_edges.cend());
 
   edges.erase({edge.from, 0, edge.to});
-  num_of_edges--;
 }
 
 

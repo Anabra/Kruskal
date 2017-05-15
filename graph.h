@@ -18,7 +18,7 @@ public:
   using const_iterator = detail::node_iterator  <NodeLabel, EdgeLabel>;
 
 
-  Graph() : num_of_nodes(0), num_of_edges(0) {};
+  Graph() : num_of_nodes(0) {};
   ~Graph() = default;
 
   void                   add_edge       (const Edge&);
@@ -35,7 +35,7 @@ public:
   void delete_node (const NodeLabel&);
   void delete_edge (const UnlabeledEdge&);
 
-  int edge_count() const { return num_of_edges; }
+  int edge_count() const { return edges.size(); }
   int node_count() const { return num_of_nodes; }
 
   const_iterator cbegin() const { return detail::node_iterator<NodeLabel, EdgeLabel>(contexts.cbegin()); }
@@ -49,7 +49,6 @@ private:
   Context& insert_node (const NodeLabel&);
 
   int num_of_nodes;
-  int num_of_edges;
 
   std::unordered_set<Edge, EdgeHash, EdgeEqual> edges;
   std::unordered_map<NodeLabel, Context> contexts;
